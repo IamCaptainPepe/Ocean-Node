@@ -25,14 +25,7 @@ chmod +x ocean-node-quickstart.sh
 echo "Запуск узла Ocean..."
 docker-compose up -d
 
-# Шаг 4: Открытие необходимых портов через UFW
-echo "Настройка брандмауэра для входящих TCP-портов..."
-sudo ufw allow 8000/tcp
-sudo ufw allow 9000/tcp
-sudo ufw allow 9001/tcp
-sudo ufw allow 9002/tcp
-sudo ufw allow 9003/tcp
 
-# Шаг 5: Проверка логов
+# Шаг 4: Проверка логов
 echo "Проверка логов Docker..."
 docker-compose logs -f
